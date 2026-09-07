@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Белый Зураб Юрьевич — CV / CTO</title>
+    <meta name="description" content="Белый Зураб Юрьевич — технический директор (CTO) с 17-летним стажем. Стратегия, цифровая трансформация, управление командами до 160+ FTE, AI, микросервисы, Java, Spring, Kubernetes. Полное CV и портфолио." />
+    <meta name="keywords" content="CTO, технический директор, CIO, IT директор, стратегия, цифровая трансформация, управление командами, Java, Spring, AI, микросервисы, Kubernetes, высоконагруженные системы" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet" />
     <style>
         /* ===== Сброс и база ===== */
@@ -27,7 +29,7 @@
             background: #ffffff;
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
-            padding: 60px 70px;
+            padding: 50px 60px;
             animation: fadeUp 0.8s ease forwards;
         }
 
@@ -36,7 +38,7 @@
             100% { opacity: 1; transform: translateY(0); }
         }
 
-        /* ===== Шапка с фото ===== */
+        /* ===== Шапка ===== */
         .header-row {
             display: flex;
             flex-wrap: wrap;
@@ -44,15 +46,15 @@
             align-items: center;
             margin-bottom: 20px;
             border-bottom: 2px solid #e6ecf3;
-            padding-bottom: 16px;
+            padding-bottom: 20px;
         }
 
         .header-left {
-            flex: 1 1 70%;
+            flex: 1 1 65%;
         }
 
         .header-left h1 {
-            font-size: 32px;
+            font-size: 34px;
             font-weight: 700;
             letter-spacing: -0.02em;
             color: #0b1a2b;
@@ -63,22 +65,68 @@
             font-size: 20px;
             font-weight: 500;
             color: #2c6b9e;
+            margin-bottom: 10px;
+        }
+
+        .location {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 1rem;
+            color: #4f657f;
+            margin-bottom: 12px;
+        }
+
+        .location span:first-child {
+            font-size: 1.2rem;
+        }
+
+        .contacts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px 30px;
+            max-width: 500px;
+        }
+
+        .contacts-grid a {
+            color: #1e3a5f;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted transparent;
+            transition: border-color 0.2s;
+        }
+
+        .contacts-grid a:hover {
+            border-bottom-color: #2c6b9e;
+        }
+
+        .contacts-grid .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+
+        .contacts-grid .contact-item .icon {
+            font-size: 1.1rem;
+            width: 1.5rem;
+            text-align: center;
         }
 
         .header-right {
-            flex: 0 0 120px;
+            flex: 0 0 150px;
             text-align: center;
         }
 
         .photo-placeholder {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             background: #e2eaf2;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 14px;
+            font-size: 16px;
             color: #4f657f;
             border: 2px dashed #b0c8dd;
             margin: 0 auto;
@@ -90,65 +138,48 @@
             border-color: #2c6b9e;
         }
 
-        /* ===== Контакты ===== */
-        .contacts {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px 30px;
-            background: #f7faff;
-            border-radius: 12px;
-            padding: 16px 20px;
-            margin-bottom: 24px;
-            border: 1px solid #e2eaf2;
-        }
-
-        .contacts a {
-            color: #1e3a5f;
-            text-decoration: none;
-            font-weight: 500;
-            border-bottom: 1px dotted transparent;
-            transition: border-color 0.2s;
-        }
-
-        .contacts a:hover {
-            border-bottom-color: #2c6b9e;
-        }
-
-        .contacts span {
-            color: #4f657f;
-        }
-
         /* ===== Типографика ===== */
         h2 {
-            font-size: 20px;
-            font-weight: 600;
+            font-size: 22px;
+            font-weight: 700;
             color: #0b1a2b;
-            margin-top: 32px;
-            margin-bottom: 16px;
+            margin-top: 40px;
+            margin-bottom: 18px;
             letter-spacing: -0.01em;
             border-left: 4px solid #2c6b9e;
             padding-left: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2 .section-icon {
+            font-size: 1.4rem;
+            opacity: 0.8;
         }
 
         h3 {
-            font-size: 18px;
-            font-weight: 600;
+            font-size: 19px;
+            font-weight: 700;
             color: #0b1a2b;
-            margin-top: 24px;
+            margin-top: 28px;
             margin-bottom: 4px;
+            padding-bottom: 6px;
+            border-bottom: 2px dotted #dce5ef;
         }
 
         h4 {
             font-size: 16px;
-            font-weight: 600;
+            font-weight: 700;
             color: #1e3a5f;
-            margin-top: 16px;
+            margin-top: 18px;
             margin-bottom: 6px;
+            letter-spacing: 0.01em;
         }
 
         .company-name {
-            font-weight: 600;
-            color: #1e3a5f;
+            font-weight: 700;
+            color: #0b1a2b;
         }
 
         .period {
@@ -159,10 +190,11 @@
         }
 
         .role {
-            font-weight: 500;
+            font-weight: 600;
             color: #2c6b9e;
-            margin-top: -4px;
+            margin-top: -2px;
             margin-bottom: 12px;
+            font-size: 1.05rem;
         }
 
         .job-description {
@@ -190,57 +222,71 @@
             position: absolute;
             left: 0;
             color: #2c6b9e;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 700;
         }
 
-        /* ===== Сетка для технологий ===== */
-        .grid-2col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px 32px;
+        /* ===== Выделение метрик ===== */
+        .metric {
+            background: #e6f0fa;
+            padding: 1px 10px;
+            border-radius: 14px;
+            font-weight: 700;
+            color: #0b1a2b;
+            display: inline-block;
         }
 
-        @media (max-width: 700px) {
-            .container { padding: 30px 20px; }
-            .grid-2col { grid-template-columns: 1fr; }
-            .header-right { flex: 1 1 100%; margin-top: 16px; }
-            .header-left { flex: 1 1 100%; }
+        .highlight {
+            background: #f0f7ff;
+            border-left: 4px solid #2c6b9e;
+            padding: 12px 18px;
+            border-radius: 0 10px 10px 0;
+            margin: 12px 0;
+            transition: background 0.2s;
         }
 
-        /* ===== Блоки ===== */
-        .section-block {
-            margin-top: 32px;
-            animation: fadeUp 0.8s ease forwards;
-            animation-delay: calc(0.1s * var(--i, 0));
+        .highlight:hover {
+            background: #e5f0fa;
         }
 
-        .section-block:first-of-type {
-            margin-top: 0;
-        }
-
-        .job-item {
-            margin-top: 24px;
-            padding-top: 20px;
-            border-top: 1px solid #eef3f8;
-        }
-
-        .job-item:first-of-type {
-            border-top: none;
-            padding-top: 0;
+        .highlight strong {
+            color: #0b1a2b;
         }
 
         .badge {
             display: inline-block;
             background: #e6edf6;
             color: #1e3a5f;
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             padding: 2px 12px;
             border-radius: 20px;
-            font-weight: 500;
+            font-weight: 600;
             margin-right: 6px;
         }
 
+        /* ===== Ключевой проект ===== */
+        .project-card {
+            background: #f8faff;
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border: 1px solid #e2eaf2;
+            transition: box-shadow 0.2s;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+        }
+
+        .project-card p {
+            margin-bottom: 4px;
+        }
+
+        .project-card strong {
+            color: #0b1a2b;
+        }
+
+        /* ===== Теги ===== */
         .tag-cloud {
             display: flex;
             flex-wrap: wrap;
@@ -251,17 +297,18 @@
         .tag {
             background: #eef3f8;
             color: #1e3a5f;
-            padding: 4px 14px;
+            padding: 5px 16px;
             border-radius: 30px;
             font-size: 0.8rem;
-            font-weight: 450;
-            transition: background 0.2s, transform 0.15s;
+            font-weight: 500;
+            transition: all 0.2s ease;
             cursor: default;
         }
 
         .tag:hover {
             background: #d6e4f0;
-            transform: scale(1.02);
+            transform: scale(1.04);
+            box-shadow: 0 2px 8px rgba(44, 107, 158, 0.12);
         }
 
         .separator {
@@ -270,19 +317,35 @@
             margin: 28px 0 12px;
         }
 
-        /* ===== Анимация при скролле ===== */
+        /* ===== Анимация появления ===== */
         .fade-scroll {
             opacity: 0;
-            transform: translateY(15px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
+            transform: translateY(20px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
         }
-
         .fade-scroll.visible {
             opacity: 1;
             transform: translateY(0);
         }
 
-        /* ===== Подвал ===== */
+        /* ===== Адаптив ===== */
+        @media (max-width: 700px) {
+            .container { padding: 30px 20px; }
+            .header-right { flex: 1 1 100%; margin-top: 16px; }
+            .header-left { flex: 1 1 100%; }
+            .contacts-grid { grid-template-columns: 1fr; gap: 4px; }
+            .contacts-grid .contact-item { white-space: normal; }
+        }
+
+        @media (max-width: 480px) {
+            .contacts-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 26px; }
+            .header-left .subhead { font-size: 17px; }
+            .photo-placeholder { width: 120px; height: 120px; }
+            h2 { font-size: 19px; }
+            h3 { font-size: 17px; }
+        }
+
         .footer-note {
             margin-top: 40px;
             font-size: 0.9rem;
@@ -291,59 +354,49 @@
             padding-top: 20px;
             text-align: center;
         }
-
-        /* ===== Адаптив ===== */
-        @media (max-width: 480px) {
-            .contacts { flex-direction: column; gap: 6px; }
-            h1 { font-size: 26px; }
-            .header-left .subhead { font-size: 17px; }
-        }
     </style>
 </head>
 <body>
 <div class="container">
 
-    <!-- ===== ШАПКА С ФОТО ===== -->
+    <!-- ===== ШАПКА ===== -->
     <div class="header-row">
         <div class="header-left">
             <h1>Белый Зураб Юрьевич</h1>
             <div class="subhead">Технический директор (CTO) | Стратегия и цифровая трансформация</div>
+            <div class="location">
+                <span>📍</span> Воронеж, Россия
+            </div>
+            <div class="contacts-grid">
+                <div class="contact-item"><span class="icon">📞</span> <a href="tel:+79081370675">+7 (908) 137 06 75</a></div>
+                <div class="contact-item"><span class="icon">✉️</span> <a href="mailto:belyj.zurab@yandex.ru">belyj.zurab@yandex.ru</a></div>
+                <div class="contact-item"><span class="icon">💬</span> <a href="https://t.me/belyiz" target="_blank">Telegram</a></div>
+                <div class="contact-item"><span class="icon">🌐</span> <a href="https://maxln.ru/KoRuz3" target="_blank">MAX</a></div>
+                <div class="contact-item"><span class="icon">🐙</span> <a href="https://github.com/BelyiZ" target="_blank">GitHub</a></div>
+                <div class="contact-item"><span class="icon">📝</span> <a href="https://habr.com/ru/users/belyiz/" target="_blank">Habr</a></div>
+            </div>
         </div>
         <div class="header-right">
             <div class="photo-placeholder" title="Здесь будет ваше фото">
-                📷 Фото
+                📷<br>Фото
             </div>
         </div>
     </div>
 
-    <!-- ===== Контакты ===== -->
-    <div class="contacts">
-        <span>📍 Воронеж, Россия</span>
-        <span>📞 +7 (908) 137 06 75</span>
-        <span>✉️ <a href="mailto:belyj.zurab@yandex.ru">belyj.zurab@yandex.ru</a></span>
-        <span>💬 <a href="https://t.me/belyiz" target="_blank">Telegram</a></span>
-        <span>🌐 <a href="https://maxln.ru/KoRuz3" target="_blank">MAX</a></span>
-        <span>🐙 <a href="https://github.com/BelyiZ" target="_blank">GitHub</a></span>
-        <span>📝 <a href="https://habr.com/ru/users/belyiz/" target="_blank">Habr</a></span>
-    </div>
-
-    <!-- ===== Профессиональное резюме ===== -->
-    <section class="section-block" style="--i:1;">
-        <h2>Профессиональное резюме</h2>
+    <!-- ===== О себе ===== -->
+    <section class="section-block fade-scroll" style="--i:1;">
+        <h2><span class="section-icon">📋</span> О себе</h2>
+        <p style="font-size:1.05rem; color:#1f2e3f; margin-bottom:12px;">
+            Опытный технический директор с <strong class="metric">17-летним стажем</strong>, прошедший путь от разработчика до руководителя IT-направления. Глубокое понимание всех этапов создания ПО — от проектирования архитектуры высоконагруженных систем до написания и ревью кода. Технический стек включает Java, Spring, микросервисы, Kafka, Docker, Kubernetes, а также современные AI-решения (Generative AI, TTS/STT, AI в SDLC). Управлял командой разработки из <strong class="metric">160+ FTE</strong>, масштабировал отдел с 40 до 160 человек, сократил <strong class="metric">time‑to‑market на 35%</strong> и увеличил прибыль по портфелю проектов <strong class="metric">более чем в 2 раза</strong>, а также вывел AI-продукты на новые рынки. Специализируюсь на стратегическом планировании, приоритизации бэклога, оптимизации бизнес-процессов и построении высокопроизводительных команд.
+        </p>
         <p style="font-size:1.05rem; color:#1f2e3f;">
-            Опытный технический директор с <strong>17-летним стажем</strong>, прошедший путь от разработчика до руководителя IT-направления.
-            Глубокое понимание всех этапов создания ПО — от проектирования архитектуры высоконагруженных систем до написания и ревью кода.
-            Технический стек включает Java, Spring, микросервисы, Kafka, Docker, Kubernetes, а также современные AI-решения (Generative AI, TTS/STT, AI в SDLC).
-            Управлял командой разработки из 160+ FTE, масштабировал отдел с 40 до 160 человек, сократил time‑to‑market на 35% и увеличил прибыль по портфелю проектов более чем в 2 раза, а также вывел AI-продукты на новые рынки.
-            Специализируюсь на стратегическом планировании, приоритизации бэклога, оптимизации бизнес-процессов и построении высокопроизводительных команд.
-            Дополнительно веду образовательные проекты и выступаю на профильных конференциях.
-            Ищу позицию CTO для масштабирования бизнеса через технологические инновации и эффективное управление.
+            Лидер с сильными коммуникативными навыками, ориентированный на результат. Умею выстраивать доверительные отношения с командами и заказчиками, принимать решения в условиях неопределённости и быстро адаптироваться к изменениям. Убеждён, что ключ к успеху — сочетание стратегического видения и глубокого погружения в технические детали. Дополнительно веду образовательные проекты и выступаю на профильных конференциях. Ищу позицию CTO для масштабирования бизнеса через технологические инновации и эффективное управление.
         </p>
     </section>
 
     <!-- ===== ОПЫТ РАБОТЫ ===== -->
-    <section class="section-block" style="--i:2;">
-        <h2>Опыт работы</h2>
+    <section class="section-block fade-scroll" style="--i:2;">
+        <h2><span class="section-icon">💼</span> Опыт работы</h2>
 
         <!-- NeuroCity -->
         <div class="job-item">
@@ -354,23 +407,26 @@
 
                 <h4>Ключевые результаты</h4>
                 <ul>
-                    <li>Сократил Lead Time на <strong>45%</strong> (до 4 дней) за счёт оптимизации процессов и интеграции AI в SDLC.</li>
+                    <li>Сократил Lead Time на <strong class="metric">45%</strong> (до 4 дней) за счёт оптимизации процессов и интеграции AI в SDLC.</li>
                     <li>Перевёл команду на стабильный цикл релизов — 1 раз в неделю / 2 недели.</li>
-                    <li>Уменьшил MTTR в <strong>2 раза</strong>.</li>
-                    <li>Сократил ФОТ заказчика до <strong>30%</strong> и TCO решений на <strong>36%</strong>.</li>
-                    <li>Повысил eNPS среди IT-специалистов на <strong>27%</strong> через ИПР и матрицы компетенций.</li>
+                    <li>Уменьшил MTTR в <strong class="metric">2 раза</strong>.</li>
+                    <li>Сократил ФОТ заказчика до <strong class="metric">30%</strong> и TCO решений на <strong class="metric">36%</strong>.</li>
+                    <li>Повысил eNPS среди IT-специалистов на <strong class="metric">27%</strong> через ИПР и матрицы компетенций.</li>
                     <li>Создал с нуля AI-компетенцию и вывел на рынок продукт с LLM, RAG, TTS/STT.</li>
                     <li>Провёл полную реорганизацию ИТ‑структуры (6‑месячная трансформация: грейды, ролевая модель, выделение дизайн-отделов).</li>
-                    <li>Управлял IT‑бюджетом ~80 млн руб./год, командой из 48 чел. (10 прямых подчинённых).</li>
+                    <li>Управлял IT‑бюджетом <strong class="metric">~80 млн руб./год</strong>, командой из 48 чел. (10 прямых подчинённых).</li>
                     <li>Управлял портфелем из 5 проектов (кастомизации основного продукта).</li>
                     <li><strong>Обеспечил информационную безопасность:</strong> защищённые контуры для персональных данных и гостайны, соответствие ФЗ‑152, ФЗ‑149, приказам ФСТЭК, регистрация в реестре ПО, внутренние правила кибербезопасности.</li>
                 </ul>
 
-                <h4>Продукт «Цифровой сотрудник»</h4>
-                <p>Мультимодальный AI-агент (LLM, RAG, TTS, STT, видеогенерация) на разработанном устройстве (стойка с тач-экраном, биометрия, сканер, принтер, терминал). Работает в пилотах: 200+ АЗС, 15 ТЦ/БЦ, МФЦ в 5 городах, гостиницы.</p>
+                <div class="project-card">
+                    <strong>🌟 Ключевой проект «Цифровой сотрудник»</strong>
+                    <p><strong>Задача:</strong> создать полностью автономного AI-агента для замещения или дополнения живого сотрудника в задачах консультирования, продаж и обслуживания.</p>
+                    <p><strong>Действие:</strong> разработал архитектуру и организовал процесс создания продукта с нуля, объединив мультимодальные AI-технологии и специализированное железо.</p>
+                    <p><strong>Результат:</strong> продукт работает в пилотах — <strong class="metric">200+ АЗС (Лукойл, ГПН, Teboil)</strong>, 15 ТЦ/БЦ, МФЦ в 5 городах, гостиницы, ведутся переговоры о масштабировании на федеральном уровне.</p>
+                </div>
 
-                <h4>Навигационные киоски для ВДНХ</h4>
-                <p>Промышленная эксплуатация несколько лет.</p>
+                <p><strong>Навигационные киоски для ВДНХ</strong> — промышленная эксплуатация несколько лет.</p>
 
                 <h4>Технологический стек</h4>
                 <p>Java, Spring, Go, C, Python, Node.js, PostgreSQL, MongoDB, SQLite, Docker, Kubernetes, Kafka, Redis, Prometheus, Grafana, GitLab CI, LLM (Qwen3, Giga AM v3), RAG (BAAI/bge-m3, BM25), TTS/STT, видеогенерация (LatentSync 1.5, LTX 2.3), PyTorch, vLLM, Ollama, React, Electron.</p>
@@ -386,35 +442,51 @@
 
                 <h4>Карьерный трек</h4>
                 <ul>
-                    <li>2015–2016: Middle Java-разработчик</li>
-                    <li>2017–2018: Senior Java-разработчик</li>
-                    <li>2018–2019: Team Lead</li>
-                    <li>2019–2025: Руководитель практики Java (Департамент разработки ПО)</li>
+                    <li><span class="badge">2015–2016</span> Middle Java-разработчик</li>
+                    <li><span class="badge">2017–2018</span> Senior Java-разработчик</li>
+                    <li><span class="badge">2018–2019</span> Team Lead</li>
+                    <li><span class="badge">2019–2025</span> Руководитель практики Java (Департамент разработки ПО)</li>
                     <li>Параллельно: Руководитель проектов, Продукт-менеджер, Руководитель отдела обучения, Координатор AI-сообщества</li>
                 </ul>
 
                 <h4>Ключевые результаты (управление практикой Java)</h4>
                 <ul>
-                    <li>Масштабировал практику с <strong>40 до 160 FTE</strong> (17 городов).</li>
+                    <li>Масштабировал практику с <strong class="metric">40 до 160 FTE</strong> (17 городов).</li>
                     <li>Внедрил 10‑уровневую систему грейдов, матрицу компетенций, ИПР.</li>
-                    <li>Снизил текучесть на <strong>30%</strong>, ускорил онбординг на <strong>60%</strong>.</li>
-                    <li>Управлял бюджетом практики ~50 млн руб./год; совокупный бюджет (практика + Кампус + KubeCastle) до 70 млн руб./год.</li>
+                    <li>Снизил текучесть на <strong class="metric">30%</strong>, ускорил онбординг на <strong class="metric">60%</strong>.</li>
+                    <li>Управлял бюджетом практики <strong class="metric">~50 млн руб./год</strong>; совокупный бюджет (практика + Кампус + KubeCastle) до <strong class="metric">70 млн руб./год</strong>.</li>
                     <li>В 2020 выделил мобильное подразделение, подготовил руководителей.</li>
                 </ul>
 
                 <h4>Ключевые проекты</h4>
+
+                <div class="project-card">
+                    <strong>✈️ Ключевой проект «Главный портал для авиакомпании S7» (2018–2024)</strong>
+                    <p><strong>Роль:</strong> Tech Lead → кризис-менеджер → Руководитель проекта (с 2019)</p>
+                    <p><strong>Задача:</strong> спасти проект на этапе кризиса (плохое состояние, риск потери заказчика).</p>
+                    <p><strong>Действие:</strong> провёл анализ стека, аудит кода, подбор новых методологий ведения проекта. Изменил процессы взаимодействия команды и приоритеты задач. Обеспечил защиту от DDoS-атак и других видов кибератак.</p>
+                    <p><strong>Результат:</strong> проект сохранён для компании; заключён договор о стратегическом партнёрстве; привлечены дополнительные проекты от заказчика (портфель вырос до 4 проектов); прибыль по портфелю проектов выросла <strong class="metric">более чем в 2 раза</strong>; разработана уникальная DevOps-платформа, создан новый медиа-ресурс с построенной с нуля CMS.</p>
+                </div>
+
                 <ul>
-                    <li><strong>Главный портал для авиакомпании S7 (2018–2024):</strong> роль Tech Lead → кризис-менеджер → руководитель проекта. Сохранил проект, заключил стратегическое партнёрство, привлёк дополнительные проекты, увеличил прибыль <strong>более чем в 2 раза</strong>. Разработал DevOps-платформу, CMS с нуля. Обеспечил защиту от DDoS и других кибератак.</li>
                     <li><strong>Проект «Гербарий» (Фонд перспективных исследований, 2015–2016):</strong> full‑stack разработка «Единой среды управления» (ЕСУ).</li>
                     <li><strong>Внутренний документооборот для ПФР (2016–2017):</strong> решение для парсинга документов.</li>
                     <li><strong>Аудит и план перехода на новые технологии для крупного гипермаркета (2017):</strong> переход на современный стек.</li>
                     <li><strong>Экспертная поддержка проектов:</strong> Газпром Нефть, ЦРТ, Ростелеком, ВТБ, Сбербанк, Почта России.</li>
                 </ul>
 
-                <h4>Внутренние продукты</h4>
+                <div class="project-card">
+                    <strong>🚀 Ключевой проект «KubeCastle» (2023–2025) — платформа-акселератор</strong>
+                    <p><strong>Задача:</strong> сократить издержки на сетап и поддержку проектов, обеспечить шаринг разработанных функциональных блоков.</p>
+                    <p><strong>Действие:</strong> разработал платформу для быстрой конфигурации проекта, автоматизации развертывания инфраструктуры, оформления доступов, создания базовых структур, подключения общих компонентов, формирование стандартного пайплайна, настройка линтеров и статанализа кода.</p>
+                    <p><strong>Результат:</strong> экономия для компании составила порядка <strong class="metric">52 млн руб./год</strong>. Платформа использовалась в десятках проектов. Бюджет продукта — ~10 млн руб./год.</p>
+                </div>
+
+                <p><strong>Кампус (2022–2024) — внутренний отдел обучения</strong>
                 <ul>
-                    <li><strong>KubeCastle (2023–2025):</strong> платформа-акселератор для быстрого сетапа проектов. Экономия ~52 млн руб./год, >100 тыс. скачиваний компонентов.</li>
-                    <li><strong>Кампус (2022–2024):</strong> внутренний отдел обучения (LMS, курсы по Java, тестированию, фронтенду, SQL, Spring, софт-скиллам, стажировки). Полная автономия.</li>
+                    <li>Создал с нуля: разработал суббренд, сформировал команду (от 2 до 4 человек), развернул LMS.</li>
+                    <li>Разработанные курсы: Java-разработка, тестирование, фронтенд-разработка, SQL, Spring, софт-скиллы, программы производственной практики и стажировки, программа подготовки спикеров.</li>
+                    <li>Результат: отдел перешёл на полную автономию. Бюджет — ~5 млн руб./год.</li>
                 </ul>
 
                 <h4>Координация AI-сообщества (2024–2025)</h4>
@@ -425,7 +497,7 @@
                 <h4>Профессиональная активность и награды</h4>
                 <ul>
                     <li>Организовал первый внешний корпоративный митап и процесс их проведения.</li>
-                    <li>Дважды лауреат премии «Проект года» от Global CIO.</li>
+                    <li>Дважды лауреат премии <strong>«Проект года» от Global CIO</strong>.</li>
                     <li>Внутренние награды: номинации «Дебют года» (2015), «Разработчик года» (2016, 2017), «Лучший Тимлид» (2019), премия «Доверие коллег» (2021), награда за 10-летие (2025).</li>
                 </ul>
 
@@ -482,8 +554,8 @@
     </section>
 
     <!-- ===== Преподавательская деятельность ===== -->
-    <section class="section-block" style="--i:3;">
-        <h2>Преподавательская и образовательная деятельность</h2>
+    <section class="section-block fade-scroll" style="--i:3;">
+        <h2><span class="section-icon">📚</span> Преподавательская и образовательная деятельность</h2>
         <ul>
             <li><strong>Воронежский государственный университет</strong> (2019–2020, 2022–2023, с 2026) – дисциплины: «Разработка современных веб-приложений», «Сетевое администрирование», «Проектирование информационных систем» (лекции, практика, лабораторные).</li>
             <li><strong>Создатель открытого курса по Java-разработке на GitHub</strong> (2021).</li>
@@ -496,8 +568,8 @@
     </section>
 
     <!-- ===== Образование ===== -->
-    <section class="section-block" style="--i:4;">
-        <h2>Образование</h2>
+    <section class="section-block fade-scroll" style="--i:4;">
+        <h2><span class="section-icon">🎓</span> Образование</h2>
         <ul>
             <li><strong>2026 – настоящее время</strong> — Аспирантура (очная), Воронежский государственный университет, направление «Компьютерные науки и информатика. Искусственный интеллект и машинное обучение».</li>
             <li><strong>2013</strong> — Магистр, ВГУ, «Математика. Компьютерные науки».</li>
@@ -508,8 +580,8 @@
     </section>
 
     <!-- ===== Языки ===== -->
-    <section class="section-block" style="--i:5;">
-        <h2>Языки</h2>
+    <section class="section-block fade-scroll" style="--i:5;">
+        <h2><span class="section-icon">🗣️</span> Языки</h2>
         <ul>
             <li><strong>Русский</strong> — родной</li>
             <li><strong>Английский</strong> — B2 (Upper‑Intermediate) — чтение технической документации, ведение переговоров, участие в конференциях</li>
@@ -517,8 +589,8 @@
     </section>
 
     <!-- ===== Рекомендации ===== -->
-    <section class="section-block" style="--i:6;">
-        <h2>Рекомендации</h2>
+    <section class="section-block fade-scroll" style="--i:6;">
+        <h2><span class="section-icon">📌</span> Рекомендации</h2>
         <ul>
             <li><strong>Николай Сокорнов</strong> — Руководитель департамента разработки ПО в Рексофт</li>
             <li><strong>Николай Ищенко</strong> — Операционный директор в NeuroCity</li>
@@ -527,8 +599,8 @@
     </section>
 
     <!-- ===== Ключевые компетенции (AI-фильтрация) ===== -->
-    <section class="section-block" style="--i:7;">
-        <h2>Ключевые компетенции (для AI-фильтрации)</h2>
+    <section class="section-block fade-scroll" style="--i:7;">
+        <h2><span class="section-icon">🏷️</span> Ключевые компетенции (для AI-фильтрации)</h2>
         <div class="tag-cloud">
             <span class="tag">CTO</span>
             <span class="tag">CIO</span>
@@ -665,6 +737,16 @@
             <span class="tag">мультимодальность</span>
             <span class="tag">голосовые сервисы</span>
             <span class="tag">видеогенерация</span>
+            <span class="tag">техническая стратегия</span>
+            <span class="tag">Agile-трансформация</span>
+            <span class="tag">кросс-функциональное взаимодействие</span>
+            <span class="tag">масштабирование команд</span>
+            <span class="tag">архитектурное руководство</span>
+            <span class="tag">управление изменениями</span>
+            <span class="tag">выстраивание процессов с нуля</span>
+            <span class="tag">цифровые продукты</span>
+            <span class="tag">enterprise-решения</span>
+            <span class="tag">высоконагруженные платформы</span>
         </div>
     </section>
 
@@ -676,7 +758,6 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        // Плавное появление блоков при скролле
         const fadeEls = document.querySelectorAll('.fade-scroll');
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
@@ -684,18 +765,15 @@
                     entry.target.classList.add('visible');
                 }
             });
-        }, { threshold: 0.2 });
+        }, { threshold: 0.15 });
         fadeEls.forEach(el => observer.observe(el));
-        // Сразу показываем видимые блоки
-        document.querySelectorAll('.section-block').forEach(el => el.classList.add('fade-scroll'));
-        setTimeout(() => {
-            document.querySelectorAll('.section-block').forEach(el => {
-                const rect = el.getBoundingClientRect();
-                if (rect.top < window.innerHeight) {
-                    el.classList.add('visible');
-                }
-            });
-        }, 100);
+        // показываем уже видимые блоки
+        document.querySelectorAll('.fade-scroll').forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight) {
+                el.classList.add('visible');
+            }
+        });
     });
 </script>
 
