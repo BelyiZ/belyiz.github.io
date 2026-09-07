@@ -28,7 +28,6 @@
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
             padding: 60px 70px;
-            transition: all 0.3s ease;
             animation: fadeUp 0.8s ease forwards;
         }
 
@@ -37,8 +36,22 @@
             100% { opacity: 1; transform: translateY(0); }
         }
 
-        /* ===== Типографика ===== */
-        h1 {
+        /* ===== Шапка с фото ===== */
+        .header-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e6ecf3;
+            padding-bottom: 16px;
+        }
+
+        .header-left {
+            flex: 1 1 70%;
+        }
+
+        .header-left h1 {
             font-size: 32px;
             font-weight: 700;
             letter-spacing: -0.02em;
@@ -46,81 +59,35 @@
             margin-bottom: 4px;
         }
 
-        .subhead {
+        .header-left .subhead {
             font-size: 20px;
             font-weight: 500;
             color: #2c6b9e;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #e6ecf3;
-            padding-bottom: 16px;
         }
 
-        h2 {
-            font-size: 20px;
-            font-weight: 600;
-            color: #0b1a2b;
-            margin-top: 32px;
-            margin-bottom: 16px;
-            letter-spacing: -0.01em;
-            border-left: 4px solid #2c6b9e;
-            padding-left: 16px;
+        .header-right {
+            flex: 0 0 120px;
+            text-align: center;
         }
 
-        h3 {
-            font-size: 18px;
-            font-weight: 600;
-            color: #0b1a2b;
-            margin-top: 24px;
-            margin-bottom: 8px;
+        .photo-placeholder {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #e2eaf2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #4f657f;
+            border: 2px dashed #b0c8dd;
+            margin: 0 auto;
+            transition: all 0.3s;
         }
 
-        .company-name {
-            font-weight: 600;
-            color: #1e3a5f;
-        }
-
-        .period {
-            font-weight: 400;
-            color: #5e6f88;
-            font-size: 0.95rem;
-            margin-left: 8px;
-        }
-
-        .role {
-            font-weight: 500;
-            color: #2c6b9e;
-            margin-top: -4px;
-            margin-bottom: 12px;
-        }
-
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        li {
-            position: relative;
-            padding-left: 24px;
-            margin-bottom: 6px;
-        }
-
-        li::before {
-            content: "—";
-            position: absolute;
-            left: 0;
-            color: #2c6b9e;
-            font-weight: 300;
-        }
-
-        .grid-2col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px 32px;
-        }
-
-        @media (max-width: 700px) {
-            .container { padding: 30px 20px; }
-            .grid-2col { grid-template-columns: 1fr; }
+        .photo-placeholder:hover {
+            background: #d6e4f0;
+            border-color: #2c6b9e;
         }
 
         /* ===== Контакты ===== */
@@ -149,6 +116,96 @@
 
         .contacts span {
             color: #4f657f;
+        }
+
+        /* ===== Типографика ===== */
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #0b1a2b;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+            border-left: 4px solid #2c6b9e;
+            padding-left: 16px;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #0b1a2b;
+            margin-top: 24px;
+            margin-bottom: 4px;
+        }
+
+        h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e3a5f;
+            margin-top: 16px;
+            margin-bottom: 6px;
+        }
+
+        .company-name {
+            font-weight: 600;
+            color: #1e3a5f;
+        }
+
+        .period {
+            font-weight: 400;
+            color: #5e6f88;
+            font-size: 0.95rem;
+            margin-left: 8px;
+        }
+
+        .role {
+            font-weight: 500;
+            color: #2c6b9e;
+            margin-top: -4px;
+            margin-bottom: 12px;
+        }
+
+        .job-description {
+            margin-top: 8px;
+        }
+
+        .job-description p {
+            margin-bottom: 8px;
+        }
+
+        /* ===== Списки ===== */
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 6px;
+        }
+
+        li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #2c6b9e;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        /* ===== Сетка для технологий ===== */
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px 32px;
+        }
+
+        @media (max-width: 700px) {
+            .container { padding: 30px 20px; }
+            .grid-2col { grid-template-columns: 1fr; }
+            .header-right { flex: 1 1 100%; margin-top: 16px; }
+            .header-left { flex: 1 1 100%; }
         }
 
         /* ===== Блоки ===== */
@@ -213,7 +270,7 @@
             margin: 28px 0 12px;
         }
 
-        /* ===== Анимация при скролле (дополнительно) ===== */
+        /* ===== Анимация при скролле ===== */
         .fade-scroll {
             opacity: 0;
             transform: translateY(15px);
@@ -239,25 +296,35 @@
         @media (max-width: 480px) {
             .contacts { flex-direction: column; gap: 6px; }
             h1 { font-size: 26px; }
+            .header-left .subhead { font-size: 17px; }
         }
     </style>
 </head>
 <body>
 <div class="container">
 
-    <!-- ===== ШАПКА ===== -->
-    <h1>Белый Зураб Юрьевич</h1>
-    <div class="subhead">Технический директор (CTO) | Стратегия и цифровая трансформация</div>
+    <!-- ===== ШАПКА С ФОТО ===== -->
+    <div class="header-row">
+        <div class="header-left">
+            <h1>Белый Зураб Юрьевич</h1>
+            <div class="subhead">Технический директор (CTO) | Стратегия и цифровая трансформация</div>
+        </div>
+        <div class="header-right">
+            <div class="photo-placeholder" title="Здесь будет ваше фото">
+                📷 Фото
+            </div>
+        </div>
+    </div>
 
     <!-- ===== Контакты ===== -->
     <div class="contacts">
-        <span><span>📍</span> Воронеж, Россия</span>
-        <span><span>📞</span> +7 (908) 137 06 75</span>
-        <span><span>✉️</span> <a href="mailto:belyj.zurab@yandex.ru">belyj.zurab@yandex.ru</a></span>
-        <span><span>💬</span> <a href="https://t.me/belyiz" target="_blank">Telegram</a></span>
-        <span><span>🌐</span> <a href="https://maxln.ru/KoRuz3" target="_blank">MAX</a></span>
-        <span><span>🐙</span> <a href="https://github.com/BelyiZ" target="_blank">GitHub</a></span>
-        <span><span>📝</span> <a href="https://habr.com/ru/users/belyiz/" target="_blank">Habr</a></span>
+        <span>📍 Воронеж, Россия</span>
+        <span>📞 +7 (908) 137 06 75</span>
+        <span>✉️ <a href="mailto:belyj.zurab@yandex.ru">belyj.zurab@yandex.ru</a></span>
+        <span>💬 <a href="https://t.me/belyiz" target="_blank">Telegram</a></span>
+        <span>🌐 <a href="https://maxln.ru/KoRuz3" target="_blank">MAX</a></span>
+        <span>🐙 <a href="https://github.com/BelyiZ" target="_blank">GitHub</a></span>
+        <span>📝 <a href="https://habr.com/ru/users/belyiz/" target="_blank">Habr</a></span>
     </div>
 
     <!-- ===== Профессиональное резюме ===== -->
@@ -282,94 +349,135 @@
         <div class="job-item">
             <h3><span class="company-name">NeuroCity™</span> <span class="period">(Воронеж) — Декабрь 2025 – настоящее время</span></h3>
             <div class="role">Технический директор (CTO)</div>
-            <p style="font-size:0.95rem; color:#3d5166; margin-bottom:8px;"><em>Информационные технологии, разработка ПО, разработка устройств, фиджитал-инфраструктура, цифровые сотрудники</em></p>
-            <ul>
-                <li>Сократил Lead Time на <strong>45%</strong> (до 4 дней) за счёт оптимизации процессов и интеграции AI в SDLC.</li>
-                <li>Перевёл команду на стабильный цикл релизов — 1 раз в неделю / 2 недели.</li>
-                <li>Уменьшил MTTR в <strong>2 раза</strong>.</li>
-                <li>Сократил ФОТ заказчика до <strong>30%</strong> и TCO решений на <strong>36%</strong>.</li>
-                <li>Повысил eNPS среди IT-специалистов на <strong>27%</strong> через ИПР и матрицы компетенций.</li>
-                <li>Создал с нуля AI-компетенцию и вывел на рынок продукт с LLM, RAG, TTS/STT.</li>
-                <li>Провёл полную реорганизацию ИТ‑структуры (6‑месячная трансформация: грейды, ролевая модель, выделение дизайн-отделов).</li>
-                <li>Управлял IT‑бюджетом ~80 млн руб./год, командой из 48 чел. (10 прямых подчинённых).</li>
-                <li>Управлял портфелем из 5 проектов (кастомизации основного продукта).</li>
-                <li><strong>Обеспечил информационную безопасность:</strong> защищённые контуры для персональных данных и гостайны, соответствие ФЗ‑152, ФЗ‑149, приказам ФСТЭК, регистрация в реестре ПО, внутренние правила кибербезопасности.</li>
-            </ul>
-            <p><strong>Продукт «Цифровой сотрудник»</strong> — мультимодальный AI-агент (LLM, RAG, TTS, STT, видеогенерация) на разработанном устройстве (стойка с тач-экраном, биометрия, сканер, принтер, терминал). Работает в пилотах: 200+ АЗС, 15 ТЦ/БЦ, МФЦ в 5 городах, гостиницы.</p>
-            <p><strong>Навигационные киоски для ВДНХ</strong> — промышленная эксплуатация несколько лет.</p>
-            <p><strong>Технологический стек:</strong> Java, Spring, Go, C, Python, Node.js, PostgreSQL, MongoDB, SQLite, Docker, Kubernetes, Kafka, Redis, Prometheus, Grafana, GitLab CI, LLM (Qwen3, Giga AM v3), RAG (BAAI/bge-m3, BM25), TTS/STT, видеогенерация (LatentSync 1.5, LTX 2.3), PyTorch, vLLM, Ollama, React, Electron.</p>
+            <div class="job-description">
+                <p><em>Информационные технологии, разработка ПО, разработка устройств, фиджитал-инфраструктура, цифровые сотрудники</em></p>
+
+                <h4>Ключевые результаты</h4>
+                <ul>
+                    <li>Сократил Lead Time на <strong>45%</strong> (до 4 дней) за счёт оптимизации процессов и интеграции AI в SDLC.</li>
+                    <li>Перевёл команду на стабильный цикл релизов — 1 раз в неделю / 2 недели.</li>
+                    <li>Уменьшил MTTR в <strong>2 раза</strong>.</li>
+                    <li>Сократил ФОТ заказчика до <strong>30%</strong> и TCO решений на <strong>36%</strong>.</li>
+                    <li>Повысил eNPS среди IT-специалистов на <strong>27%</strong> через ИПР и матрицы компетенций.</li>
+                    <li>Создал с нуля AI-компетенцию и вывел на рынок продукт с LLM, RAG, TTS/STT.</li>
+                    <li>Провёл полную реорганизацию ИТ‑структуры (6‑месячная трансформация: грейды, ролевая модель, выделение дизайн-отделов).</li>
+                    <li>Управлял IT‑бюджетом ~80 млн руб./год, командой из 48 чел. (10 прямых подчинённых).</li>
+                    <li>Управлял портфелем из 5 проектов (кастомизации основного продукта).</li>
+                    <li><strong>Обеспечил информационную безопасность:</strong> защищённые контуры для персональных данных и гостайны, соответствие ФЗ‑152, ФЗ‑149, приказам ФСТЭК, регистрация в реестре ПО, внутренние правила кибербезопасности.</li>
+                </ul>
+
+                <h4>Продукт «Цифровой сотрудник»</h4>
+                <p>Мультимодальный AI-агент (LLM, RAG, TTS, STT, видеогенерация) на разработанном устройстве (стойка с тач-экраном, биометрия, сканер, принтер, терминал). Работает в пилотах: 200+ АЗС, 15 ТЦ/БЦ, МФЦ в 5 городах, гостиницы.</p>
+
+                <h4>Навигационные киоски для ВДНХ</h4>
+                <p>Промышленная эксплуатация несколько лет.</p>
+
+                <h4>Технологический стек</h4>
+                <p>Java, Spring, Go, C, Python, Node.js, PostgreSQL, MongoDB, SQLite, Docker, Kubernetes, Kafka, Redis, Prometheus, Grafana, GitLab CI, LLM (Qwen3, Giga AM v3), RAG (BAAI/bge-m3, BM25), TTS/STT, видеогенерация (LatentSync 1.5, LTX 2.3), PyTorch, vLLM, Ollama, React, Electron.</p>
+            </div>
         </div>
 
         <!-- Рексофт -->
         <div class="job-item">
             <h3><span class="company-name">Рексофт</span> <span class="period">(Воронеж) — Апрель 2015 – Декабрь 2025 (10 лет 9 мес.)</span></h3>
             <div class="role">Руководитель практики Java / Руководитель проектов / Продукт-менеджер</div>
-            <p style="font-size:0.95rem; color:#3d5166; margin-bottom:8px;"><em>Ведущая IT-компания (1000+ проектов, 1500+ сотрудников), разработка ПО, системная интеграция, ИТ-консалтинг</em></p>
-            <p><strong>Карьерный трек:</strong> Middle Java-разработчик (2015–2016) → Senior (2017–2018) → Team Lead (2018–2019) → Руководитель практики Java (2019–2025).</p>
-            <ul>
-                <li>Масштабировал практику с <strong>40 до 160 FTE</strong> (17 городов).</li>
-                <li>Внедрил 10‑уровневую систему грейдов, матрицу компетенций, ИПР.</li>
-                <li>Снизил текучесть на <strong>30%</strong>, ускорил онбординг на <strong>60%</strong>.</li>
-                <li>Управлял бюджетом практики ~50 млн руб./год; совокупный бюджет (практика + Кампус + KubeCastle) до 70 млн руб./год.</li>
-                <li>В 2020 выделил мобильное подразделение, подготовил руководителей.</li>
-            </ul>
-            <p><strong>Ключевые проекты:</strong></p>
-            <ul>
-                <li><strong>Главный портал для авиакомпании S7 (2018–2024):</strong> роль Tech Lead → кризис-менеджер → руководитель проекта. Сохранил проект, заключил стратегическое партнёрство, привлёк дополнительные проекты, увеличил прибыль <strong>более чем в 2 раза</strong>. Разработал DevOps-платформу, CMS с нуля. Обеспечил защиту от DDoS и других кибератак.</li>
-                <li><strong>Проект «Гербарий» (Фонд перспективных исследований, 2015–2016):</strong> full‑stack разработка «Единой среды управления» (ЕСУ).</li>
-                <li><strong>Внутренний документооборот для ПФР (2016–2017):</strong> решение для парсинга документов.</li>
-                <li><strong>Аудит и план перехода на новые технологии для крупного гипермаркета (2017):</strong> переход на современный стек.</li>
-                <li><strong>Экспертная поддержка проектов:</strong> Газпром Нефть, ЦРТ, Ростелеком, ВТБ, Сбербанк, Почта России.</li>
-            </ul>
-            <p><strong>Внутренние продукты:</strong></p>
-            <ul>
-                <li><strong>KubeCastle (2023–2025):</strong> платформа-акселератор для быстрого сетапа проектов. Экономия ~52 млн руб./год, >100 тыс. скачиваний компонентов.</li>
-                <li><strong>Кампус (2022–2024):</strong> внутренний отдел обучения (LMS, курсы по Java, тестированию, фронтенду, SQL, Spring, софт-скиллам, стажировки). Полная автономия.</li>
-            </ul>
-            <p><strong>Координация AI-сообщества (2024–2025):</strong> регулярные встречи (до 120 участников), мастер-классы, разбор кейсов, создание внутренних AI-решений.</p>
-            <p><strong>Профессиональная активность:</strong> организовал первый внешний корпоративный митап и процесс их проведения. Дважды лауреат премии «Проект года» от Global CIO.</p>
-            <p><strong>Награды внутри компании:</strong> номинации «Дебют года» (2015), «Разработчик года» (2016, 2017), «Лучший Тимлид» (2019), премия «Доверие коллег» (2021), награда за 10-летие (2025).</p>
-            <p><strong>Технологический стек:</strong> Java, Spring (Boot, MVC, Data, Security, Cloud), Hibernate, JPA, Kotlin, Python, Node.js, REST API, GraphQL, gRPC, PostgreSQL, MySQL, Oracle, MongoDB, Redis, Hazelcast, Ignite, JUnit, Mockito, Cucumber, SonarQube, Docker, Kubernetes, Kafka, RabbitMQ, Prometheus, Grafana, ELK, Jenkins, GitLab CI, TeamCity, Ansible, AWS, Azure, Git, Maven, Gradle, IntelliJ IDEA, AI (Llama, Mistral, DeepSeek, OpenAI, GitHub Copilot, Cursor).</p>
+            <div class="job-description">
+                <p><em>Ведущая IT-компания (1000+ проектов, 1500+ сотрудников), разработка ПО, системная интеграция, ИТ-консалтинг</em></p>
+
+                <h4>Карьерный трек</h4>
+                <ul>
+                    <li>2015–2016: Middle Java-разработчик</li>
+                    <li>2017–2018: Senior Java-разработчик</li>
+                    <li>2018–2019: Team Lead</li>
+                    <li>2019–2025: Руководитель практики Java (Департамент разработки ПО)</li>
+                    <li>Параллельно: Руководитель проектов, Продукт-менеджер, Руководитель отдела обучения, Координатор AI-сообщества</li>
+                </ul>
+
+                <h4>Ключевые результаты (управление практикой Java)</h4>
+                <ul>
+                    <li>Масштабировал практику с <strong>40 до 160 FTE</strong> (17 городов).</li>
+                    <li>Внедрил 10‑уровневую систему грейдов, матрицу компетенций, ИПР.</li>
+                    <li>Снизил текучесть на <strong>30%</strong>, ускорил онбординг на <strong>60%</strong>.</li>
+                    <li>Управлял бюджетом практики ~50 млн руб./год; совокупный бюджет (практика + Кампус + KubeCastle) до 70 млн руб./год.</li>
+                    <li>В 2020 выделил мобильное подразделение, подготовил руководителей.</li>
+                </ul>
+
+                <h4>Ключевые проекты</h4>
+                <ul>
+                    <li><strong>Главный портал для авиакомпании S7 (2018–2024):</strong> роль Tech Lead → кризис-менеджер → руководитель проекта. Сохранил проект, заключил стратегическое партнёрство, привлёк дополнительные проекты, увеличил прибыль <strong>более чем в 2 раза</strong>. Разработал DevOps-платформу, CMS с нуля. Обеспечил защиту от DDoS и других кибератак.</li>
+                    <li><strong>Проект «Гербарий» (Фонд перспективных исследований, 2015–2016):</strong> full‑stack разработка «Единой среды управления» (ЕСУ).</li>
+                    <li><strong>Внутренний документооборот для ПФР (2016–2017):</strong> решение для парсинга документов.</li>
+                    <li><strong>Аудит и план перехода на новые технологии для крупного гипермаркета (2017):</strong> переход на современный стек.</li>
+                    <li><strong>Экспертная поддержка проектов:</strong> Газпром Нефть, ЦРТ, Ростелеком, ВТБ, Сбербанк, Почта России.</li>
+                </ul>
+
+                <h4>Внутренние продукты</h4>
+                <ul>
+                    <li><strong>KubeCastle (2023–2025):</strong> платформа-акселератор для быстрого сетапа проектов. Экономия ~52 млн руб./год, >100 тыс. скачиваний компонентов.</li>
+                    <li><strong>Кампус (2022–2024):</strong> внутренний отдел обучения (LMS, курсы по Java, тестированию, фронтенду, SQL, Spring, софт-скиллам, стажировки). Полная автономия.</li>
+                </ul>
+
+                <h4>Координация AI-сообщества (2024–2025)</h4>
+                <ul>
+                    <li>Регулярные встречи (до 120 участников), мастер-классы, разбор кейсов, создание внутренних AI-решений.</li>
+                </ul>
+
+                <h4>Профессиональная активность и награды</h4>
+                <ul>
+                    <li>Организовал первый внешний корпоративный митап и процесс их проведения.</li>
+                    <li>Дважды лауреат премии «Проект года» от Global CIO.</li>
+                    <li>Внутренние награды: номинации «Дебют года» (2015), «Разработчик года» (2016, 2017), «Лучший Тимлид» (2019), премия «Доверие коллег» (2021), награда за 10-летие (2025).</li>
+                </ul>
+
+                <h4>Технологический стек</h4>
+                <p>Java, Spring (Boot, MVC, Data, Security, Cloud), Hibernate, JPA, Kotlin, Python, Node.js, REST API, GraphQL, gRPC, PostgreSQL, MySQL, Oracle, MongoDB, Redis, Hazelcast, Ignite, JUnit, Mockito, Cucumber, SonarQube, Docker, Kubernetes, Kafka, RabbitMQ, Prometheus, Grafana, ELK, Jenkins, GitLab CI, TeamCity, Ansible, AWS, Azure, Git, Maven, Gradle, IntelliJ IDEA, AI (Llama, Mistral, DeepSeek, OpenAI, GitHub Copilot, Cursor).</p>
+            </div>
         </div>
 
         <!-- Skyeng -->
         <div class="job-item">
             <h3><span class="company-name">Skyeng</span> <span class="period">(Москва) — Июнь – Декабрь 2022 (7 мес.)</span></h3>
             <div class="role">Автор учебной программы</div>
-            <p style="font-size:0.95rem; color:#3d5166; margin-bottom:8px;"><em>Образовательные учреждения, повышение квалификации, бизнес-образование</em></p>
-            <ul>
-                <li>Разработал коммерческий курс «Java-разработчик с нуля» для платформы Skypro (подразделение Skyeng).</li>
-                <li>Создал программу, видеолекции, практику, домашние задания, пример собеседования.</li>
-                <li>Обрабатывал обратную связь от первых групп студентов.</li>
-            </ul>
+            <div class="job-description">
+                <p><em>Образовательные учреждения, повышение квалификации, бизнес-образование</em></p>
+                <ul>
+                    <li>Разработал коммерческий курс «Java-разработчик с нуля» для платформы Skypro (подразделение Skyeng).</li>
+                    <li>Создал программу, видеолекции, практику, домашние задания, пример собеседования.</li>
+                    <li>Обрабатывал обратную связь от первых групп студентов.</li>
+                </ul>
+            </div>
         </div>
 
         <!-- Камелот -->
         <div class="job-item">
             <h3><span class="company-name">Камелот</span> <span class="period">(Воронеж) — Август 2011 – Апрель 2015 (3 года 9 мес.)</span></h3>
             <div class="role">Ведущий Java-разработчик / Руководитель направления мобильной разработки</div>
-            <p style="font-size:0.95rem; color:#3d5166; margin-bottom:8px;"><em>СМИ, маркетинг, реклама, PR, дизайн, издательская деятельность</em></p>
-            <ul>
-                <li>Карьерный трек: Java-разработчик (фактически full-stack) → Ведущий Java-разработчик.</li>
-                <li>Разработка портала городской доски объявлений (Java, Struts, Ant, Oracle DB, фронтенд на JS, HTML, CSS, jQuery).</li>
-                <li>Инициировал и возглавил создание мобильных клиентов (Android, iOS) — команда из 2 разработчиков + дизайнер.</li>
-                <li>С нуля разработал архитектуру REST API, механизмы синхронизации и офлайн-режим.</li>
-                <li>В 2014–2015 руководил кросс-функциональной группой развития бизнеса (направление недвижимость): генерация гипотез, согласование, контроль KPI.</li>
-                <li>Ежегодно входил в число лучших сотрудников компании (2012–2014).</li>
-            </ul>
-            <p><strong>Технологический стек:</strong> Java, Struts, Ant, Oracle DB, JavaScript, HTML, CSS, jQuery, Android (Java), iOS (Objective‑C), REST API.</p>
+            <div class="job-description">
+                <p><em>СМИ, маркетинг, реклама, PR, дизайн, издательская деятельность</em></p>
+                <ul>
+                    <li><strong>Карьерный трек:</strong> Java-разработчик (фактически full-stack) → Ведущий Java-разработчик.</li>
+                    <li><strong>Разработка портала городской доски объявлений:</strong> Java, Struts, Ant, Oracle DB, фронтенд на JS, HTML, CSS, jQuery.</li>
+                    <li><strong>Мобильные клиенты:</strong> инициировал и возглавил создание (Android, iOS) — команда из 2 разработчиков + дизайнер. С нуля разработал архитектуру REST API, механизмы синхронизации и офлайн-режим.</li>
+                    <li><strong>Руководство кросс-функциональной группой развития бизнеса (2014–2015):</strong> генерация гипотез, согласование, контроль KPI.</li>
+                    <li>Ежегодно входил в число лучших сотрудников компании (2012–2014).</li>
+                </ul>
+                <h4>Технологический стек</h4>
+                <p>Java, Struts, Ant, Oracle DB, JavaScript, HTML, CSS, jQuery, Android (Java), iOS (Objective‑C), REST API.</p>
+            </div>
         </div>
 
         <!-- ОГОУ ДОД -->
         <div class="job-item">
             <h3><span class="company-name">ОГОУ ДОД «Областной центр дополнительного образования…»</span> <span class="period">(Воронеж) — 2010–2011</span></h3>
             <div class="role">Инженер-программист</div>
-            <ul>
-                <li>Спроектировал и построил локальную сеть на ~50 рабочих станций.</li>
-                <li>Настроил серверы Linux, Samba, Bash-скрипты, чат-сервер Jabber (XMPP), резервное копирование.</li>
-                <li>Создал официальный сайт на Joomla CMS (PHP, jQuery, HTML, CSS) и поддерживал его.</li>
-                <li>Обеспечивал техническую поддержку выездных мероприятий.</li>
-            </ul>
+            <div class="job-description">
+                <ul>
+                    <li>Спроектировал и построил локальную сеть на ~50 рабочих станций.</li>
+                    <li>Настроил серверы Linux, Samba, Bash-скрипты, чат-сервер Jabber (XMPP), резервное копирование.</li>
+                    <li>Создал официальный сайт на Joomla CMS (PHP, jQuery, HTML, CSS) и поддерживал его.</li>
+                    <li>Обеспечивал техническую поддержку выездных мероприятий.</li>
+                </ul>
+            </div>
         </div>
     </section>
 
@@ -567,8 +675,8 @@
 </div>
 
 <script>
-    // Плавное появление элементов при скролле (дополнительно)
     document.addEventListener('DOMContentLoaded', () => {
+        // Плавное появление блоков при скролле
         const fadeEls = document.querySelectorAll('.fade-scroll');
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
@@ -578,9 +686,8 @@
             });
         }, { threshold: 0.2 });
         fadeEls.forEach(el => observer.observe(el));
-        // сразу помечаем видимые
+        // Сразу показываем видимые блоки
         document.querySelectorAll('.section-block').forEach(el => el.classList.add('fade-scroll'));
-        // через небольшую задержку, чтобы сначала они были скрыты, потом показаны
         setTimeout(() => {
             document.querySelectorAll('.section-block').forEach(el => {
                 const rect = el.getBoundingClientRect();
